@@ -4,9 +4,10 @@
 :root {
   --white: white;
   --cian: #c6e8ee;
-  --cian: #0081AB;
+  --darkcian: #0081AB;
   --black: #04282d;
-  --geen: #1a8689;
+  --green: #1a8689;
+  --greenblue: #57C2B0;
   --yellow: #ffd366;
   --orange: #fcaf32;
   --shadow: 0 3px 6px rgba(0,0,0,0.16);
@@ -97,6 +98,11 @@ section {
 section#pricing {
   background: var(--black);
   color: var(--cian);
+  .small-table {
+    td {
+      min-width: 160px;
+    }
+  }
 }
 
 section#about {
@@ -318,15 +324,14 @@ svg {
 
 td {
   border: 1px solid #e2f0f2;
-  padding: 10px 5%;
+  padding: 4px 2%;
   text-align: left;
   width: 50%;
-  min-width: 200px;
+  font-size: 22px;
 }
 
 table {
   border-collapse: collapse;
-  display: inline-block;
   margin-bottom: 40px;
 }
 
@@ -346,7 +351,6 @@ caption {
 }
 
 table:nth-child(1) {
-  // min-width: 300px;
   caption {
     background: var(--yellow);
     color: var(--black);
@@ -355,46 +359,42 @@ table:nth-child(1) {
 }
 
 table:nth-child(2) {
-  // min-width: 400px;
   caption {
-    background: var(--yellow);
-    color: var(--black);
+    background: var(--green);
+    color: var(--white);
     font-weight: bold;
   }
 }
 
 table:nth-child(3) {
-  // min-width: 300px;
   caption {
-    background: var(--yellow);
+    background: var(--cian);
     color: var(--black);
     font-weight: bold;
   }
 }
 
+table.large-table {
+  width: 49%;
+    td:first-child {
+      width: 60%;
+    }
+    td:nth-child(2) {
+      width: 40%;
+    }
+}
 table:nth-child(4) {
   caption {
-    background: var(--yellow);
+    background: var(--greenblue);
     color: var(--black);
     font-weight: bold;
-  }
-  td:first-child {
-    min-width: 500px;
-  }
-  td:nth-child(2) {
-    min-width: 100px;
   }
 }
 table:nth-child(5) {
-  width: 40%;
-  // max-width: 300px;
   caption {
-    background: var(--yellow);
+    background: var(--orange);
     color: var(--black);
     font-weight: bold;
-  }
-  td {
-    min-width: 300px;
   }
 }
 
@@ -438,6 +438,12 @@ table:nth-child(5) {
   }
 }
 @media (max-width: 600px) {
+  table.large-table, table.small-table {
+    width: 100%;
+  }
+  section#pricing .small-table td {
+    min-width: auto;
+  }
   .about-text {
     width: 100%;
     margin-left: auto;
