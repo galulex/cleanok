@@ -224,6 +224,33 @@ section#reviews {
   }
 }
 
+section#contacts {
+  background: var(--black);
+  input, select {
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+  }
+  table {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  h1 {
+    color: var(--yellow);
+  }
+  td {
+    color: var(--white);
+    border: none;
+    text-align: left;
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
+  }
+}
+
 .btn {
   border: 1px solid var(--black);
   border-radius: 50px;
@@ -402,10 +429,10 @@ table:nth-child(3) {
 table.large-table {
   width: 49%;
   td:first-child {
-    width: 60%;
+    width: 65%;
   }
   td:nth-child(2) {
-    width: 40%;
+    width: 35%;
   }
 }
 table:nth-child(4) {
