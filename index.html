@@ -36,16 +36,29 @@ layout: default
 <section id='services'>
   <h1>Услуги</h1>
   <input id="tab1" type="radio" name="tabsA">
-  <label for="tab1">Еженедельная уборка</label>
+  <label for="tab1">
+      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Еженедельная уборка</label>
   <br>
   <input id="tab2" type="radio" name="tabsA">
-  <label for="tab2">Генеральная уборка</label>
+  <label for="tab2">
+      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Генеральная уборка</label>
   <br>
   <input id="tab3" type="radio" name="tabsA">
-  <label for="tab3">Уборка после ремонта</label>
+  <label for="tab3">
+      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Уборка после ремонта</label>
   <br>
   <input id="tab4" type="radio" name="tabsA">
-  <label for="tab4">Мытье окон</label>
+  <label for="tab4">
+      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Мытье окон</label>
+  <br>
+  <input id="hide-tab" class="" type="radio" name="tabsA">
+  <label class="hide-tab" for="hide-tab">
+    {% svg /assets/img/arrow-right.svg width=30 %}
+  </label>
   <!--<div class="color-square"></div>-->
   <ol id="content1" class="tab-content">
     <li>обеспыливания всех доступных поверхностей</li>
@@ -99,6 +112,7 @@ layout: default
   {% svg /assets/img/sofa.svg width=240 class='sofa' %}
   {% svg /assets/img/lamp.svg width=240 class='lamp' %}
   {% svg /assets/img/flowers.svg width=240 class='flowers' %}
+  {% svg /assets/img/window.svg width=240 class='window' %}
 
 </section>
 

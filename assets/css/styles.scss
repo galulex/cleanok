@@ -124,25 +124,26 @@ section#home {
   background: url(/assets/img/bg.jpg) center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-    // url(/assets/img/bg_left_bottom.svg) left bottom 50% no-repeat,
-    // url(/assets/img/bg_right_top.svg) right top 50% no-repeat,
-    // url(/assets/img/bg_right_bottom.svg) right bottom 50% no-repeat, var(--cian);
+  // url(/assets/img/bg_left_bottom.svg) left bottom 50% no-repeat,
+  // url(/assets/img/bg_right_top.svg) right top 50% no-repeat,
+  // url(/assets/img/bg_right_bottom.svg) right bottom 50% no-repeat, var(--cian);
 }
 
 section#services {
+  overflow: hidden;
   .tab-content {
     position: absolute;
-    display: none;
     float: right;
     font-size: 18px;
-    min-width: 30%;
+    width: 30%;
     color: white;
     background: #288487db;
     right: -30%;
     top: 0;
     bottom: 0;
     margin: auto;
-    transition: all 0.7s ease-out
+    transition: all 0.2s linear;
+    padding-top: 10%;
   }
 
   input {
@@ -150,7 +151,10 @@ section#services {
   }
 
   label {
+    text-decoration: underline;
     display: inline;
+    margin-left: 41%;
+    cursor: pointer;
   }
 
   input:checked + label {
@@ -164,20 +168,29 @@ section#services {
     display: block;
     right: 0;
   }
-  .titles {
-    margin-left: 33%;
-    display: inline-block;
-  }
-}
 
-.color-square {
-  position: absolute;
-  width: 33%;
-  right: 0;
-  top: 0;
-  background: #288487db;
-  bottom: 0;
-  z-index: -1;
+  #tab1:checked ~ .hide-tab,
+  #tab2:checked ~ .hide-tab,
+  #tab3:checked ~ .hide-tab,
+  #tab4:checked ~ .hide-tab {
+    right: 25%;
+  }
+
+  #hide-tab:checked ~ .tab-content {
+    right: -30%
+  }
+
+  .hide-tab {
+    right: -30%;
+    position: absolute;
+    top: 10%;
+    z-index: 1;
+    transition: all 0.2s linear;
+    svg path {
+      stroke: white;
+    }
+  }
+
 }
 
 .btn {
@@ -271,8 +284,9 @@ svg.sofa {
 svg.flowers {
   position: absolute;
   bottom: 0;
-  right: 22%;
+  right: 15%;
   z-index: -2;
+  width: 19%;
 }
 
 svg.lamp {
@@ -280,12 +294,24 @@ svg.lamp {
   bottom: 0;
   left: 5%;
   width: 25%;
+  z-index: -2;
 }
 
 svg.clean-guru {
   position: absolute;
   bottom: 0;
+  left: 12%;
+  width: 18%;
 }
+
+svg.window {
+  right: 5%;
+  position: absolute;
+  z-index: -1;
+  bottom: 25%;
+  width: 15%;
+}
+
 svg {
   height: auto;
 }
@@ -376,6 +402,40 @@ table:nth-child(5) {
   svg.spray {
     top: 35%;
   }
+
+  section#services {
+
+    label {
+      margin-left: 0;
+    }
+    .hide-tab {
+      top: 16%;
+      right: -43%;
+    }
+    .tab-content {
+      width: 50%;
+      right: -50%;
+      padding-top: 14%;
+    }
+    #hide-tab:checked ~ .tab-content {
+      right: -50%;
+      display: none;
+    }
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4 {
+      display: block;
+      right: 0;
+    }
+
+    #tab1:checked ~ .hide-tab,
+    #tab2:checked ~ .hide-tab,
+    #tab3:checked ~ .hide-tab,
+    #tab4:checked ~ .hide-tab {
+      right: 43%;
+    }
+  }
 }
 @media (max-width: 600px) {
   .about-text {
@@ -405,4 +465,74 @@ table:nth-child(5) {
     bottom: 0;
     width: 30%;
   }
+  svg.clean-guru {
+    position: absolute;
+    bottom: 0;
+    left: 17%;
+    width: 38%;
+    z-index: -2;
+  }
+  svg.sofa {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    z-index: -2;
+  }
+  svg.lamp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    z-index: -2;
+  }
+  svg.window {
+    position: absolute;
+    width: 25%;
+    right: 5%;
+    bottom: 15%;
+    z-index: -2;
+  }
+  svg.flowers {
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+    z-index: -2;
+    width: 22%;
+  }
+
+  section#services {
+
+    label {
+      margin: auto;
+    }
+    .hide-tab {
+      top: 50%;
+      left: 107%;
+    }
+    .tab-content {
+      width: 100%;
+      right: -100%;
+      top: 50%;
+    }
+    #hide-tab:checked ~ .tab-content {
+      right: -100%;
+      display: none;
+    }
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4 {
+      display: block;
+      right: 0;
+    }
+
+    #tab1:checked ~ .hide-tab,
+    #tab2:checked ~ .hide-tab,
+    #tab3:checked ~ .hide-tab,
+    #tab4:checked ~ .hide-tab {
+      left: 7%;
+    }
+  }
+
 }
