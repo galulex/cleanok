@@ -5,3 +5,4 @@ gems:
   - jekyll-inline-svg
 svg:
   optimize: true
+baseurl: /cleanok
