@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<!--<script>-->
+  <!--function f() {-->
+    <!--alert('HUI')-->
+  <!--}-->
+<!--</script>-->
+
 <nav>
   <a href='#home'>Главная</a>
   <a href='#services'>Услуги</a>
@@ -15,7 +21,7 @@ layout: default
   <h1>Клининговая компания CleanGuru</h1>
   <p>Порядок в доме,порядок в голове</p>
   {% svg /assets/img/cleanguru.svg width=240 class='guru' %}
-    <label for="number" class='btn'>Заказать уборку</label>
+  <label for="number" class='btn'>Заказать уборку</label>
 </section>
 
 <section id='about'>
@@ -306,16 +312,18 @@ layout: default
         </td>
       </tr>
     </table>
-    <table class="booking">
-      <form action="#">
+    <form action="https://mailthis.to/onupriy94@gmail.com" method="POST">
+      <table class="booking">
         <tr>
           <td>Выберите услугу*</td>
           <td>
             <select name="service" id="select-service" class="service">
-              <option value="1">Генеральная уборка</option>
-              <option value="2">Еженедельная уборка</option>
-              <option value="3">Уборка после ремонта</option>
-              <option value="4">Мытье окон</option>
+              <option>Генеральная уборка</option>
+              <option>Еженедельная уборка</option>
+              <option>Уборка после ремонта</option>
+              <option>Мытье окон</option>
+              <option>Услуги садовника</option>
+              <option>Чистка мебели</option>
             </select>
           </td>
         </tr>
@@ -417,22 +425,22 @@ layout: default
           <td>
             <div class='number_input phone-number'>
               <label for='number'>+380</label>
-              <input type='tel' id='number' title='7 digits' pattern='[0-9]' maxlength='9' minlength='9' placeholder='_ _  _ _ _  _ _ _ _' required autocomplete='off' />
+              <input name='phone-number' type='tel' id='number' title='7 digits' maxlength='9' minlength='9' placeholder='_ _  _ _ _  _ _ _ _' required autocomplete='off' />
             </div>
           </td>
         </tr>
         <tr>
           <td>Коментарий</td>
           <td>
-            <input type="text" class="comment">
+            <input type="text" name="comment" class="comment">
           </td>
         </tr>
         <tr>
           <td>
-            <input type="submit" class="submit">
+            <input type="submit" value="Send" class="submit">
           </td>
         </tr>
-      </form>
-    </table>
+      </table>
+    </form>
   </div>
 </section>
