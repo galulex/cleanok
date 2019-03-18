@@ -15,7 +15,7 @@ layout: default
   <h1>Клининговая компания CleanGuru</h1>
   <p>Порядок в доме,порядок в голове</p>
   {% svg /assets/img/cleanguru.svg width=240 class='guru' %}
-  <button type='button' class='btn'>Заказать уборку</button>
+    <label for="number" class='btn'>Заказать уборку</label>
 </section>
 
 <section id='about'>
@@ -37,23 +37,33 @@ layout: default
   <h1>Услуги</h1>
   <input id="tab1" type="radio" name="tabsA">
   <label for="tab1">
-      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
     Еженедельная уборка</label>
   <br>
   <input id="tab2" type="radio" name="tabsA">
   <label for="tab2">
-      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
     Генеральная уборка</label>
   <br>
   <input id="tab3" type="radio" name="tabsA">
   <label for="tab3">
-      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
     Уборка после ремонта</label>
   <br>
   <input id="tab4" type="radio" name="tabsA">
   <label for="tab4">
-      {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
     Мытье окон</label>
+  <br>
+  <input id="tab5" type="radio" name="tabsA">
+  <label for="tab5">
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Услуги садовника</label>
+  <br>
+  <input id="tab6" type="radio" name="tabsA">
+  <label for="tab6">
+    {% svg /assets/img/bulb.svg width=20 class='bulb' %}
+    Чистка мебели</label>
   <br>
   <input id="hide-tab" class="" type="radio" name="tabsA">
   <label class="hide-tab" for="hide-tab">
@@ -107,6 +117,12 @@ layout: default
     <li>Мытье рам с внутренней и внешней стороны</li>
     <li>Мытье пространства между рам</li>
     <li>Мытья стекол с обеих сторон.</li>
+  </ol>
+  <ol id="content5" class="tab-content">
+    <li>Услуги предоставляются по договоренности</li>
+  </ol>
+  <ol id="content6" class="tab-content">
+    <li>Услуги предоставляются по догворенности</li>
   </ol>
   {% svg /assets/img/clean_guru.svg width=240 class='clean-guru' %}
   {% svg /assets/img/sofa.svg width=240 class='sofa' %}
@@ -219,12 +235,18 @@ layout: default
       </tr>
     </table>
   </div>
+  {% svg /assets/img/price_bg_left.svg width=240 class='price_bg_left' %}
+  {% svg /assets/img/price_bg_right.svg width=240 class='price_bg_right' %}
+  {% svg /assets/img/price_bucket.svg width=240 class='price_bucket' %}
+  {% svg /assets/img/price_maid.svg width=240 class='price_maid' %}
+  {% svg /assets/img/price_window.svg width=240 class='price_window' %}
 
 </section>
 
 <section id="reviews">
   <h1>Отзывы</h1>
   <div class="review">
+    {% svg /assets/img/testimonials_stars.svg width=240 height=50 class='testimonials_stars' %}
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed est turpis. Morbi risus urna, faucibus in cursus in, semper at elit. Nam vel dui ante. Morbi tristique sem eget tempus placerat. Curabitur ullamcorper turpis elit, vitae semper lectus faucibus sed. Donec viverra facilisis faucibus.
     </p>
@@ -233,6 +255,7 @@ layout: default
     </div>
   </div>
   <div class="review">
+    {% svg /assets/img/testimonials_stars.svg width=240 height=50 class='testimonials_stars' %}
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed est turpis. Morbi risus urna, faucibus in cursus in, semper at elit. Nam vel dui ante. Morbi tristique sem eget tempus placerat. Curabitur ullamcorper turpis elit, vitae semper lectus faucibus sed. Donec viverra facilisis faucibus.
     </p>
@@ -241,6 +264,7 @@ layout: default
     </div>
   </div>
   <div class="review">
+    {% svg /assets/img/testimonials_stars.svg width=240 height=50 class='testimonials_stars' %}
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed est turpis. Morbi risus urna, faucibus in cursus in, semper at elit. Nam vel dui ante. Morbi tristique sem eget tempus placerat. Curabitur ullamcorper turpis elit, vitae semper lectus faucibus sed. Donec viverra facilisis faucibus.
     </p>
@@ -248,59 +272,167 @@ layout: default
       <img src="/assets/img/review-avatar-1.jpg" alt="review-avatar">
     </div>
   </div>
+  {% svg /assets/img/testimonials_maid.svg width=240 class='testimonials_maid' %}
+  {% svg /assets/img/testimonials_flower.svg width=240 class='testimonials_flower' %}
+
 </section>
 
 <section id='contacts'>
   <h1>Contacts</h1>
-  <table class="contact-data">
-    <tr>
-      <td><a href="viber://add?number=+38 063 449 90 68">+38 063 449 90 68</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://t.me/+380634499068">+38 063 449 90 68</a></td>
-    </tr>
-    <tr>
-      <td><a href="tel:+38 063 449 90 68">+38 063 449 90 68</a></td>
-    </tr>
-    <tr>
-      <td><a href="mailto:contacts@cleanguru.com">contacts@cleanguru.com</a></td>
-    </tr>
-  </table>
-  <table class="booking">
-    <tr>
-      <td>Выберите услугу*</td>
-      <td>
-        <select name="service" id="select-service">
-          <option value="1">Генеральная уборка</option>
-          <option value="2">Еженедельная уборка</option>
-          <option value="3">Уборка после ремонта</option>
-          <option value="4">Мытье окон</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Выберите удобную дату</td>
-      <td>
-        <input type="date">
-      </td>
-    </tr>
-    <tr>
-      <td>Укажите время</td>
-      <td>
-        <input type="time">
-      </td>
-    </tr>
-    <tr>
-      <td>Ваш телефон*</td>
-      <td>
-        <input type="tel">
-      </td>
-    </tr>
-    <tr>
-      <td>Коментарий</td>
-      <td>
-        <input type="text">
-      </td>
-    </tr>
-  </table>
+  <div class="content">
+    <table class="contact-data">
+      <tr>
+        <td>
+          {% svg /assets/img/viber.svg width=36 class='viber' %}
+          <a href="viber://add?number=+38 063 449 90 68">+38 063 449 90 68</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {% svg /assets/img/telegram.svg width=36 class='telegram' %}
+          <a href="https://t.me/+380634499068">+38 063 449 90 68</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {% svg /assets/img/phone.svg width=36 class='phone' %}
+          <a href="tel:+38 063 449 90 68">+38 063 449 90 68</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {% svg /assets/img/mail.svg width=36 class='mail' %}
+          <a href="mailto:contacts@cleanguru.com">contacts@cleanguru.com</a>
+        </td>
+      </tr>
+    </table>
+    <table class="booking">
+      <form action="#">
+        <tr>
+          <td>Выберите услугу*</td>
+          <td>
+            <select name="service" id="select-service" class="service">
+              <option value="1">Генеральная уборка</option>
+              <option value="2">Еженедельная уборка</option>
+              <option value="3">Уборка после ремонта</option>
+              <option value="4">Мытье окон</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Выберите удобную дату</td>
+          <td>
+            <select name="date-day" class="date day">
+              <option>ДД</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+            <select name="date-month" class="date">
+              <option>ММ</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Укажите время</td>
+          <td>
+            <select name="time-hours" class="time">
+              <option>_ _</option>
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+            </select>
+            <select name="time-minutes" class="time">
+              <option>_ _</option>
+              <option>00</option>
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+              <option>50</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Ваш телефон*</td>
+          <td>
+            <div class='number_input phone-number'>
+              <label for='number'>+380</label>
+              <input type='tel' id='number' title='7 digits' pattern='[0-9]' maxlength='9' minlength='9' placeholder='_ _  _ _ _  _ _ _ _' required autocomplete='off' />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Коментарий</td>
+          <td>
+            <input type="text" class="comment">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" class="submit">
+          </td>
+        </tr>
+      </form>
+    </table>
+  </div>
 </section>

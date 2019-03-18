@@ -99,6 +99,35 @@ section {
 section#pricing {
   background: var(--black);
   color: var(--cian);
+  svg.price_bg_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  svg.price_bg_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  svg.price_bucket {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 9%;
+  }
+  svg.price_maid {
+    position: absolute;
+    right: 0;
+    width: 16%;
+    top: 44%;
+  }
+  svg.price_window {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    width: 12%;
+  }
   .small-table {
     td {
       min-width: 160px;
@@ -171,7 +200,9 @@ section#services {
   #tab1:checked ~ #content1,
   #tab2:checked ~ #content2,
   #tab3:checked ~ #content3,
-  #tab4:checked ~ #content4 {
+  #tab4:checked ~ #content4,
+  #tab5:checked ~ #content5,
+  #tab6:checked ~ #content6 {
     display: block;
     right: 0;
   }
@@ -179,7 +210,9 @@ section#services {
   #tab1:checked ~ .hide-tab,
   #tab2:checked ~ .hide-tab,
   #tab3:checked ~ .hide-tab,
-  #tab4:checked ~ .hide-tab {
+  #tab4:checked ~ .hide-tab,
+  #tab5:checked ~ .hide-tab,
+  #tab6:checked ~ .hide-tab {
     right: 25%;
   }
 
@@ -222,20 +255,99 @@ section#reviews {
       }
     }
   }
+  svg.testimonials_flower {
+    position: absolute;
+    right: 0;
+    top: 12%;
+    width: 11%;
+  }
+  svg.testimonials_maid {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 14%;
+  }
+  svg.testimonials_stars {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 17%;
+  }
 }
 
 section#contacts {
   background: var(--black);
+  .content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
   input, select {
     background-color: var(--green);
     border: none;
     border-radius: 5px;
     height: 30px;
+    color: white;
+    &:focus {
+      outline: none;
+    }
+    &.comment, &.service {
+      width: 100%;
+    }
+    &.date {
+      width: 25%
+    }
+    &.time {
+      width: 25%;
+    }
   }
+  .phone-number {
+    background-color: var(--green);
+    border-radius: 5px;
+    width: 60%;
+    input{
+      font-size: 18px;
+      width: 70%;
+      &::placeholder { color: white;}
+    }
+  }
+
   table {
-    width: 49%;
     display: inline-block;
     vertical-align: top;
+    &.booking {
+      width: 49%;
+      td:first-child {
+        width: 40%;
+      }
+      td:nth-child(2) {
+        position: relative;
+        width: 60%
+      }
+    }
+    &.contact-data {
+      width: 29%;
+      margin-left: 20%;
+      td {
+        height: 47px;
+        padding-left: 45px;
+        position: relative;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+
+    }
   }
   h1 {
     color: var(--yellow);
@@ -379,7 +491,7 @@ td {
   padding: 4px 2%;
   text-align: left;
   width: 50%;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 table {
@@ -455,6 +567,14 @@ table:nth-child(5) {
     top: 35%;
   }
 
+  section#contacts {
+    table.booking {
+      .phone-number {
+        width: 100%;
+      }
+    }
+  }
+
   section#services {
 
     label {
@@ -476,7 +596,9 @@ table:nth-child(5) {
     #tab1:checked ~ #content1,
     #tab2:checked ~ #content2,
     #tab3:checked ~ #content3,
-    #tab4:checked ~ #content4 {
+    #tab4:checked ~ #content4,
+    #tab5:checked ~ #content5,
+    #tab6:checked ~ #content6 {
       display: block;
       right: 0;
     }
@@ -484,17 +606,41 @@ table:nth-child(5) {
     #tab1:checked ~ .hide-tab,
     #tab2:checked ~ .hide-tab,
     #tab3:checked ~ .hide-tab,
-    #tab4:checked ~ .hide-tab {
+    #tab4:checked ~ .hide-tab,
+    #tab5:checked ~ .hide-tab,
+    #tab6:checked ~ .hide-tab {
       right: 43%;
     }
   }
 }
 @media (max-width: 600px) {
+  section#contacts {
+    table.booking, table.contact-data {
+      width: 100%!important;
+      display: block;
+      margin: 10% 0 0 0;
+      .phone-number {
+        width: 100%;
+      }
+    }
+    .content {
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+  }
   table.large-table, table.small-table {
     width: 100%;
   }
-  section#pricing .small-table td {
-    min-width: auto;
+  section#pricing {
+    .small-table td {
+      min-width: auto;
+    }
+    svg.price_bucket {
+      left: 0
+    }
   }
   .about-text {
     width: 100%;
@@ -572,6 +718,7 @@ table:nth-child(5) {
       width: 100%;
       right: -100%;
       top: 50%;
+      overflow-x: auto;
     }
     #hide-tab:checked ~ .tab-content {
       right: -100%;
@@ -580,7 +727,9 @@ table:nth-child(5) {
     #tab1:checked ~ #content1,
     #tab2:checked ~ #content2,
     #tab3:checked ~ #content3,
-    #tab4:checked ~ #content4 {
+    #tab4:checked ~ #content4,
+    #tab5:checked ~ #content5,
+    #tab6:checked ~ #content6 {
       display: block;
       right: 0;
     }
@@ -588,7 +737,9 @@ table:nth-child(5) {
     #tab1:checked ~ .hide-tab,
     #tab2:checked ~ .hide-tab,
     #tab3:checked ~ .hide-tab,
-    #tab4:checked ~ .hide-tab {
+    #tab4:checked ~ .hide-tab,
+    #tab5:checked ~ .hide-tab,
+    #tab6:checked ~ .hide-tab {
       left: 7%;
     }
   }
@@ -598,8 +749,19 @@ table:nth-child(5) {
 
       .review-avatar {
         right: 12%;
-        top: 0%;
+        top: 0;
       }
+    }
+    svg.testimonials_stars {
+      top: 10%;
+      left: 10%;
+      width: 35%;
+    }
+    svg.testimonials_flower {
+      width: 20%;
+    }
+    svg.testimonials_maid {
+      display: none;
     }
   }
 
