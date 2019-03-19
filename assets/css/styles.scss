@@ -63,6 +63,11 @@ h1 {
   margin: 0;
 }
 
+h4 {
+  text-align: center;
+  margin: 0;
+}
+
 nav {
   position: fixed;
   background: white;
@@ -166,20 +171,28 @@ section#home {
 }
 
 section#services {
-  overflow: hidden;
+  overflow-x: hidden;
   .tab-content {
     position: absolute;
     float: right;
     font-size: 18px;
     width: 30%;
     color: white;
-    background: #288487db;
+    background: #288487eb;
     right: -30%;
     top: 0;
     bottom: 0;
     margin: auto;
     transition: all 0.2s linear;
     padding-top: 10%;
+    overflow-x: auto;
+    p {
+      margin: 0 10%;
+    }
+  }
+
+  .description {
+    text-align: center;
   }
 
   input {
@@ -576,7 +589,6 @@ table:nth-child(5) {
   }
 
   section#services {
-
     label {
       margin-left: 0;
     }
@@ -718,7 +730,6 @@ table:nth-child(5) {
       width: 100%;
       right: -100%;
       top: 50%;
-      overflow-x: auto;
     }
     #hide-tab:checked ~ .tab-content {
       right: -100%;
@@ -765,4 +776,14 @@ table:nth-child(5) {
     }
   }
 
+  .desktop-only {
+    display: none;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
 }
