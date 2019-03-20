@@ -6,4 +6,4 @@ gems:
   - jekyll-multiple-languages-plugin
 svg:
   optimize: true
-languages: ["ru", "ua"]
+languages: ["ua", "ru"]

@@ -1,3 +1,9 @@
+navbar:
+  main: Головна
+  services: Послуги
+  prices: Ціни
+  contacts: Контакти
 home:
   title: Клінінгова компанія CleanGuru
-  tagline: Порядок у домі, порядок у голові
+  hui: Порядок у домі, порядок у голові
+  bookbutton: Замовити прибирання

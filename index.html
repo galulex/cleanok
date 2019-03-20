@@ -3,19 +3,19 @@ layout: default
 ---
 
 <nav>
-  <a href='#home'>Главная</a>
-  <a href='#services'>Услуги</a>
-  <a href='#pricing'>Прайс</a>
-  <a href='#contacts'>Контакты</a>
+  <a href='#home'>{% t navbar.main %}</a>
+  <a href='#services'>{% t navbar.services %}</a>
+  <a href='#pricing'>{% t navbar.prices %}</a>
+  <a href='#contacts'>{% t navbar.contacts %}</a>
 </nav>
 
 <section id='home'>
   {% svg /assets/img/spray.svg width=200 class='spray' %}
   {% svg /assets/img/bucket.svg width=100 class='bucket' %}
-  <h1>{% translate home.title %}</h1>
-  <p>Порядок в доме,порядок в голове</p>
+  <h1>{% t home.title %}</h1>
+  <p>{% t home.hui %}</p>
   {% svg /assets/img/cleanguru.svg width=240 class='guru' %}
-  <label for="number" class='btn'>Заказать уборку</label>
+  <label for="number" class='btn'>{% translate home.bookbutton %}</label>
 </section>
 
 <section id='about'>
@@ -24,199 +24,151 @@ layout: default
   <!--{% svg /assets/img/fairies.svg width=200 class='fairies' %}-->
   {% svg /assets/img/caution.svg width=200 class='caution' %}
   <h2 class="about-text">
-    Цените свое время </br>
-    Доверьте уборку специалистам
+    {% t about.title %}
   </h2>
   <input type="checkbox" class="read-more-state" id="show-more" />
   <p class="about-text read-more-wrap text-regular">
-    Как и многие жители нашего города, мы неоднократно сталкивались с отсутствием квалифицированной помощи для ухода за домом,
-    с нехваткой доверия к клининговым компаниям-посредникам и их сотрудникам.
-    <br>
-    CleanGuru - это качественно-новый подход к профессиональной уборке домов, квартир,
-    коттеджей и других жилых помещений в городе Черкассы. Наша команда знает, как справиться
-    с разного уровня сложностями и сделать дом чистым без вреда Вашим родным и питомцам.
+    {% t about.desc-top %}
     <span class="read-more-target">
     <br>
-    Принципы клининговой компании CleanGuru основаны на ценности времени и доверии.
-    Мы считаем, что приглашение в дом - это проявление доверия. В ответ команда CleanGuru
-    искренне заботится о качестве и своевременности выполненных задач. Мы делаем все процессы
-    максимально открытыми и прозрачными. Наши клинеры проходят постоянное обучение, а менеджеры
-    контролируют весь процесс уборки с момента подачи заявки до принятия работы заказчиком.
+    {% t about.desc-bottom %}
     </span>
   </p>
   <label for="show-more" class="read-more-trigger about-text text-regular"></label>
   <h2 class="about-text">
-    Наши фишки
+    {% t about.our-features %}
   </h2>
   <div class="features about-text">
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_certified.svg width=40 class='2_certified' %}
-        Сертифицированные специалисты
+        {% t about.features.certified %}
       </summary>
       <p class="text-smaller">
-        Менеджеры CleanGuru - сертифицированные специалисты в области химической
-        промышленности и клининговых услуг. Все сотрудники компании проходят обязательное
-        обучение основам клининга и правильному использованию химических средств.
+        {% t about.features.certified-text %}
       </p>
     </details>
 
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_service.svg width=30 class='2_service' %}
-        Удобный сервис
+        {% t about.features.service %}
       </summary>
       <p class="text-smaller">
-        Мы работаем ежедневно и без выходных. По желанию заказчика осуществляем доставку
-        ключей и дополнительные услуги по уходу за домом.
+        {% t about.features.service-text %}
       </p>
     </details>
 
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_eco.svg width=36 class='eco' %}
-        Эко-линейка
+        {% t about.features.eco %}
       </summary>
       <p class="text-smaller">
-        В процессе уборки помещений мы используем химические средства, безопасные для здоровья.
-        По желанию заказчика наши клинеры применяют линейку эко-средств, пройденных проверку и
-        отмеченных знаком экологической безопасности Европейского союза eco label.
+        {% t about.features.eco-text %}
       </p>
     </details>
 
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_professional.svg width=32 height=40 class='2_professional' %}
-        Профессиональное оборудование
+        {% t about.features.professional %}
       </summary>
       <p class="text-smaller">
-        Во время уборки помещений наши специалисты используют профессиональную химию,
-        оборудование и гипоаллергенные средства от передовых производителей в области
-        клининга: KARCHER, VERMOP, KIEHL, BLANIDAS.
+        {% t about.features.professional-text %}
       </p>
     </details>
   </div>
 </section>
 
 <section id='services'>
-  <h1>Услуги</h1>
-  <h4>CleanGuru - забота о каждом уголке вашего дома.</h4>
+  <h1>{% t services.title %}</h1>
+  <h4>{% t services.tagline %}</h4>
   <p class="description desktop-only">
-    При заказе клининговых услуг наши менеджеры проконсультируют вас по мерам и средствам безопасности во время уборки, дадут предварительную оценку стоимости заказа. Вам  не нужно готовиться к приезду клинера - мы полностью укомплектованы и готовы сразу же приступить к работе.
+    {% t services.description %}
   </p>
   <input id="tab1" type="radio" name="tabsA">
   <label for="tab1">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Еженедельная уборка</label>
+    {% t services.tab.title.1 %}
+  </label>
   <br>
   <input id="tab2" type="radio" name="tabsA">
   <label for="tab2">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Генеральная уборка</label>
+    {% t services.tab.title.2 %}
+  </label>
   <br>
   <input id="tab3" type="radio" name="tabsA">
   <label for="tab3">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Уборка после ремонта</label>
+    {% t services.tab.title.3 %}
+  </label>
   <br>
   <input id="tab4" type="radio" name="tabsA">
   <label for="tab4">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Мытье окон</label>
+    {% t services.tab.title.4 %}
+  </label>
   <br>
   <input id="tab5" type="radio" name="tabsA">
   <label for="tab5">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Услуги садовника</label>
+    {% t services.tab.title.5 %}
+  </label>
   <br>
   <input id="tab6" type="radio" name="tabsA">
   <label for="tab6">
     {% svg /assets/img/bulb.svg width=20 class='bulb' %}
-    Чистка мебели</label>
+    {% t services.tab.title.6 %}
+  </label>
   <br>
   <input id="hide-tab" class="" type="radio" name="tabsA">
   <label class="hide-tab" for="hide-tab">
     {% svg /assets/img/arrow-right.svg width=30 %}
   </label>
   <p class="description mobile-only">
-    При заказе клининговых услуг наши менеджеры проконсультируют вас по мерам и средствам безопасности во время уборки, дадут предварительную оценку стоимости заказа. Вам  не нужно готовиться к приезду клинера - мы полностью укомплектованы и готовы сразу же приступить к работе.
+    {% t services.description %}
   </p>
   <div id="content1" class="tab-content">
     <p>
-        В еженедельной уборке наши клинеры особое внимание уделяют протиранию разных поверхностей от пыли, мытью полов и санузла.
-    </p>
+      {% t services.tab.text.1 %}    </p>
     <ol>
-      <li>обеспыливания всех доступных поверхностей</li>
-      <li>протирание кухонной гарнитуры</li>
-      <li>мытья санузла, полов, плинтусов</li>
-      <li>мытье полов плинтусов по квартире</li>
-      <li>сбор и выбрасывание мусора</li>
-      <li>и др. дополнительно обсуждается</li>
+      {% t services.tab.list.1 %}
     </ol>
   </div>
   <div id="content2" class="tab-content">
     <p>
-      Во время генеральной уборки специалисты CleanGuru используют более концентрированную химию, чтобы избавиться от въевшихся пятен и застаревшей грязи.
+      {% t services.tab.text.2 %}
     </p>
     <ol>
-      <li>сбор выбрасывание мусора (до 10 кг)</li>
-      <li>обеспыливания всех доступных поверхностей</li>
-      <li>чистка зеркал (до 5 м кв)</li>
-      <li>мытье полов, плинтусов</li>
-      <li>мытья душевой кабины, ванны, плитки</li>
-      <li>протирания дверей</li>
-      <li>обезжиривания кухни</li>
-      <li>мытья батарей, труб</li>
-      <li>влажную уборку осветительных приборов и техники</li>
-      <li>мытья настенной плитки на кухне и с.в.</li>
-      <li>влажную уборку осветительных приборов и техники</li>
-      <li>удаление пыли с ковров и ковровых покрытий</li>
-      <li>влажную уборку осветительных приборов и техники</li>
-      <li>и др. дополнительно обсуждается</li>
+      {% t services.tab.list.2 %}
     </ol>
   </div>
   <div id="content3" class="tab-content">
     <p>
-      Завершающая стадия любых ремонтных работ - уборка помещения после ремонта. Мы моем и очищаем каждый уголок вашего жилища, избавляемся от пыли, выносим оставшийся строительный мусор и делаем все, чтобы Вы с радостью въехали в новый, уютный дом.
+      {% t services.tab.text.3 %}
     </p>
     <ol>
-      <li>Чистка всех доступных мест от строительной грязи</li>
-      <li>Мытье полов</li>
-      <li>Мытье подоконников</li>
-      <li>Мытье наружных поверхностей мебели</li>
-      <li>Обеспыливания холодильника, тв и другой техники</li>
-      <li>Обеспыливания и влажную уборку зеркал</li>
-      <li>Мытье окон и оконных рам</li>
-      <li>Чистка отопительных батарей и труб</li>
-      <li>Обеспыливания и влажную уборку осветительных приборов</li>
-      <li>Вынос мусора (до 12 кг)</li>
-      <li>Обеспыливания и влажную уборку дверей и дверных ручек</li>
-      <li>Мытье плитки настенной</li>
-      <li>Чистка сантехники в ванной и туалетной комнатах</li>
-      <li>Обеспыливания мягкой мебели</li>
-      <li>и ин.додатково обсуждается</li>
+      {% t services.tab.list.3 %}
     </ol>
   </div>
   <div id="content4" class="tab-content">
     <p>
-      Мойка окон - сложное и опасное занятие, которое лучше доверить профессионалам. С помощью специальных средств и инструментов, команда CleanGuru приведет в порядок окна любых габаритов независимо от типа и строения Вашего жилища.
+      {% t services.tab.text.4 %}
     </p>
     <ol>
-      <li>Мытье подоконника и карнизов</li>
-      <li>Мытье откосов и отливов</li>
-      <li>Мытье рам с внутренней и внешней стороны</li>
-      <li>Мытье пространства между рам</li>
-      <li>Мытья стекол с обеих сторон.</li>
+      {% t services.tab.list.4 %}
     </ol>
   </div>
   <div id="content5" class="tab-content">
     <p>
-      Благодаря знаниям и опыту команда CleanGuru справится с разного рода загрязнениями мягкой мебели и ковров. Химчистка проводится профессиональными средствами, не оставляет следов и неприятного запаха.
+      {% t services.tab.text.5 %}
     </p>
   </div>
   <div id="content6" class="tab-content">
     <p>
-      Услуги садовника - это спектр услуг, связанных с уборкой придомовой территории: чистка водостоков, уход за газонами, декоративным садом и инсталяциями, уборка листвы.
+      {% t services.tab.text.6 %}
     </p>
   </div>
   {% svg /assets/img/clean_guru.svg width=240 class='clean-guru' %}
