@@ -226,6 +226,13 @@ section#home {
   // url(/assets/img/bg_left_bottom.svg) left bottom 50% no-repeat,
   // url(/assets/img/bg_right_top.svg) right top 50% no-repeat,
   // url(/assets/img/bg_right_bottom.svg) right bottom 50% no-repeat, var(--cian);
+
+  .locale {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+
 }
 
 section#services {
