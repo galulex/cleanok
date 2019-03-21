@@ -1,0 +1,1 @@
+To deploy production run `./deploy.sh`
