@@ -116,9 +116,9 @@ section#pricing {
   }
   svg.price_bucket {
     position: absolute;
-    left: 50%;
+    left: 3%;
     bottom: 0;
-    width: 9%;
+    width: 7%;
   }
   svg.price_maid {
     position: absolute;
@@ -502,8 +502,8 @@ svg.dish {
 
 svg.vacuum {
   position: absolute;
-  right: 20%;
-  bottom: 10%;
+  right: 6%;
+  bottom: 5%;
   width: 19%;
   max-width: 300px;
 }
@@ -596,7 +596,7 @@ td:nth-child(2) {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 10%;
+  padding: 5% 10%;
 }
 
 caption {
@@ -817,11 +817,14 @@ table:nth-child(5) {
     .hide-tab {
       top: 50%;
       left: 107%;
+      svg {
+        transform: scale(1,1) scale(-1,1);
+      }
     }
     .tab-content {
       width: 100%;
       right: -100%;
-      top: 50%;
+      padding-top: 30%;
     }
     #hide-tab:checked ~ .tab-content {
       right: -100%;
@@ -844,6 +847,7 @@ table:nth-child(5) {
     #tab5:checked ~ .hide-tab,
     #tab6:checked ~ .hide-tab {
       left: 7%;
+      top: 11%;
     }
   }
   section#reviews {
