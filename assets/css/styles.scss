@@ -395,6 +395,7 @@ section#contacts {
     display: inline-block;
     vertical-align: top;
     &.booking {
+      margin-bottom: 0;
       //width: 49%;
       td:first-child {
         width: 40%;
@@ -435,6 +436,19 @@ section#contacts {
 
   .submit {
     cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    background-color: #ffc873;
+    width: 100%;
+  }
+
+  table.submit-table {
+    width: 100%;
+    display: block;
+    td {
+      width: 1%;
+    }
   }
 }
 
