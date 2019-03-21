@@ -3,5 +3,7 @@ sass:
   style: compressed
 gems:
   - jekyll-inline-svg
+  - jekyll-multiple-languages-plugin
 svg:
   optimize: true
+languages: ["ua", "ru"]
