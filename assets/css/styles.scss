@@ -883,6 +883,20 @@ table:nth-child(5) {
     display: none;
   }
 
+  @supports (-webkit-overflow-scrolling: touch) {
+    body {
+      scroll-snap-type: none;
+      scroll-snap-align: start;
+
+      section {
+        height: unset;
+      }
+      section#home {
+        height: 100vh;
+      }
+    }
+  }
+
 }
 
 @media (min-width: 600px) {
