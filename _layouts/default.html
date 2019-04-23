@@ -1,11 +1,39 @@
 <!doctype html>
 <html>
   <head>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{% t.schema.address_locality %}",
+          "addressRegion": "{% t.schema.address_region %}",
+          "streetAddress": "{% t.schema.street_address %}"
+        },
+        "description": "{% t meta.description %}",
+        "name": "{% t schema.name %}",
+        "image": "https://i.imgur.com/w1NB1lu.png",
+        "url": "https://clean.guru/",
+        "telephone": "+38 063 449 90 68",
+        "email": "admin@clean.guru",
+        "openingHours": "Mo,Tu,We,Th,Fr,Sat,Sun 09:00-18:00",
+        "priceRange": [ "{% t prices.table.title.total %} - {% t prices.table.from %} 15 грн.", "{% t prices.table.title.weekly %} - {% t prices.table.from %} 15 грн.", "{% t prices.table.title.after_repair %} - {% t prices.table.from %} 25 грн.", "{% t prices.table.title.window %} - {% t prices.table.from %} 80. грн", "{% t prices.table.title.furniture %} - {% t prices.table.from %} 400 грн."]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://clean.guru/",
+        "description":  "{% t meta.description %}"
+      }
+    </script>
+
     <meta content="text/html; charset=utf-8" http-equiv="Content-type">
     <meta content="width=device-width, user-scalable=no" name="viewport">
-    <meta content= {% t meta.page_title %} name="title">
-    <meta content= {% t meta.description %} name="description">
-    <title>{{ page.title }}</title>
+    <meta content= "{% t meta.description %}" name="description">
+    <title>{% t meta.page_title %}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="mask-icon" href="/apple-icon.svg" color="#ff0000">
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
