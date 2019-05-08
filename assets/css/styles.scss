@@ -39,6 +39,7 @@ html {
   overflow: hidden;
   padding: 0;
   margin: 0;
+  max-height: 100%;
   height: 100%;
   font-size: 26px;
   font-family: Akrobat;
@@ -58,6 +59,9 @@ body {
 }
 
 h1 {
+  @media (max-width: 375px) {
+    font-size: 1.5rem;
+  }
   text-align: center;
   font-size: 2rem;
   margin: 0;
@@ -144,12 +148,18 @@ section#pricing {
     right: 0;
   }
   svg.price_bucket {
+    @media (max-width: 600px) {
+      display: none;
+    }
     position: absolute;
     left: 3%;
     bottom: 0;
     width: 7%;
   }
   svg.price_maid {
+    @media (max-width: 600px) {
+      display: none;
+    }
     position: absolute;
     right: 0;
     width: 16%;
@@ -190,11 +200,11 @@ section#about {
   }
 
   .read-more-state ~ .read-more-trigger:before {
-    content: 'Show more';
+    content: 'Показати повністю';
   }
 
   .read-more-state:checked ~ .read-more-trigger:before {
-    content: 'Show less';
+    content: 'Сховати';
   }
 
   .read-more-trigger {
@@ -209,19 +219,20 @@ section#about {
       vertical-align: top;
       display: inline-block;
       position: relative;
-      margin: 4% 0;
+      margin: 8% 0;
 
       summary {
         outline: none;
         cursor: pointer;
-        padding-left: 14%;
+        padding-left: 25%;
 
         svg {
           position: absolute;
-          top: -8px;
-          left: -6%;
+          top: -13px;
+          left: 0;
           vertical-align: middle;
           line-height: 100%;
+          width: 55px;
         }
         &::-webkit-details-marker {
           display: none;
@@ -236,8 +247,15 @@ section#about {
   margin-bottom: 0;
 }
 
+details {
+  p {
+    margin: 2em 0px 0px 0px;
+  }
+}
+
 details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
+
 }
 
 @keyframes sweep {
@@ -272,7 +290,7 @@ section#services {
     font-size: 18px;
     width: 30%;
     color: white;
-    background-color: rgba(0, 130, 126, 0.85);
+    background-color: rgba(0, 130, 126, 0.9);
     right: -30%;
     top: 0;
     bottom: 0;
@@ -397,12 +415,24 @@ section#contacts {
     flex-direction: row;
   }
 
+  label.service:after {
+    content: '▾';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+
   input, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
     background-color: var(--green);
     border: none;
     border-radius: 5px;
     height: 30px;
     color: white;
+    padding: 5px;
     &:focus {
       outline: none;
     }
@@ -489,6 +519,9 @@ section#contacts {
 }
 
 .btn {
+  @media (max-width: 320px) {
+    min-width: 295px;
+  }
   border: 1px solid var(--black);
   border-radius: 50px;
   background: #e2f0f2;
@@ -513,6 +546,14 @@ section#contacts {
 }
 
 svg.bucket {
+  @media (max-width: 375px) {
+    top: 70%;
+    width: 11%;
+  }
+  @media (max-width: 320px) {
+    top: 65.5%;
+    width: 11%;
+  }
   position: absolute;
   left: 20%;
   top: 70%;
@@ -561,6 +602,10 @@ svg.caution {
 }
 
 svg.guru {
+  @media (max-width: 375px) {
+    bottom: 146px;
+    width: 40%;
+  }
   position: absolute;
   left: 50%;
   bottom: 194px;
@@ -585,6 +630,9 @@ svg.flowers {
 }
 
 svg.lamp {
+  @media (max-width: 320px) {
+    display: none;
+  }
   position: absolute;
   bottom: 0;
   left: 5%;
@@ -775,8 +823,8 @@ table:nth-child(5) {
 
         summary {
           svg {
-            top: -11px;
-            left: -3%;
+            top: -19px;
+            left: 0%;
           }
         }
       }
@@ -790,14 +838,16 @@ table:nth-child(5) {
     top: 50%;
   }
   svg.vacuum {
-    right: 4%;
-    bottom: 5%;
-    width: 39%;
+    // right: 4%;
+    // bottom: -3%;
+    // width: 39%;
+    display: none;
   }
   svg.caution {
-    right: 7%;
-    bottom: 0%;
-    width: 21%;
+    // right: 7%;
+    // bottom: -3%;
+    // width: 21%;
+    display: none;
   }
   svg.fairies {
     left: 9%;
@@ -812,15 +862,15 @@ table:nth-child(5) {
   svg.clean-guru {
     position: absolute;
     bottom: 0;
-    left: 17%;
-    width: 38%;
+    left: 9%;
+    width: 51%;
     z-index: -2;
   }
   svg.sofa {
     position: absolute;
     bottom: 0;
-    left: 25%;
-    width: 50%;
+    left: 17%;
+    width: 67%;
     z-index: -2;
   }
   svg.lamp {
@@ -831,24 +881,36 @@ table:nth-child(5) {
     z-index: -2;
   }
   svg.window {
-    position: absolute;
-    width: 25%;
-    right: 5%;
-    bottom: 15%;
-    z-index: -2;
+    // position: absolute;
+    // width: 25%;
+    // right: 5%;
+    // bottom: 15%;
+    // z-index: -2;
+    display: none;
   }
   svg.flowers {
-    position: absolute;
-    bottom: 0;
-    right: 4%;
-    z-index: -2;
-    width: 22%;
+    // position: absolute;
+    // bottom: 0;
+    // right: 4%;
+    // z-index: -2;
+    // width: 22%;
+    display: none;
   }
 
   section#services {
 
+    h1 {
+      margin: 12px 0px;
+      font-size: 1rem;
+    }
+
+    h4 {
+      font-size: .7em;
+    }
+
     label {
       margin: auto;
+      font-size: 0.8em;
     }
     .hide-tab {
       top: 50%;
@@ -888,7 +950,7 @@ table:nth-child(5) {
   }
   section#reviews {
     .review {
-      padding: 22% 6% 0 6%;
+      padding: 30% 6% 0 6%;
 
       .review-avatar {
         right: 12%;
@@ -923,6 +985,9 @@ table:nth-child(5) {
       section#home {
         height: 100vh;
       }
+      section#services {
+        height: 100vh;
+      }
     }
   }
 }
@@ -944,12 +1009,11 @@ table:nth-child(5) {
   }
   &smaller {
     font-size: 14px;
-
-    @media (max-width: 600px) {
-      font-size: 12px;
-    }
   }
   &bold {
     font-weight: bold;
+  }
+  &underline {
+    text-decoration: underline;
   }
 }

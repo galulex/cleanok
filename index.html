@@ -53,7 +53,9 @@ layout: default
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_certified.svg width=40 class='2_certified' %}
-        {% t about.features.certified %}
+        <span class="text-underline">
+          {% t about.features.certified %}
+        </span>
       </summary>
       <p class="text-smaller">
         {% t about.features.certified-text %}
@@ -63,7 +65,9 @@ layout: default
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_service.svg width=40 class='2_service' %}
-        {% t about.features.service %}
+        <span class="text-underline">
+          {% t about.features.service %}
+        </span>
       </summary>
       <p class="text-smaller">
         {% t about.features.service-text %}
@@ -73,7 +77,9 @@ layout: default
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_eco.svg width=40 class='eco' %}
-        {% t about.features.eco %}
+        <span class="text-underline">
+          {% t about.features.eco %}
+        </span>
       </summary>
       <p class="text-smaller">
         {% t about.features.eco-text %}
@@ -83,7 +89,9 @@ layout: default
     <details class="feature">
       <summary class="text-regular text-bold">
         {% svg /assets/img/2_professional.svg width=40 class='2_professional' %}
-        {% t about.features.professional %}
+        <span class="text-underline">
+          {% t about.features.professional %}
+        </span>
       </summary>
       <p class="text-smaller">
         {% t about.features.professional-text %}
@@ -360,14 +368,16 @@ layout: default
         <tr>
           <td>{% t contacts.booking.choose_service %}</td>
           <td>
-            <select name="service" id="select-service" class="service">
-              <option>{% t services.tab.title.1 %}</option>
-              <option>{% t services.tab.title.2 %}</option>
-              <option>{% t services.tab.title.3 %}</option>
-              <option>{% t services.tab.title.4 %}</option>
-              <option>{% t services.tab.title.5 %}</option>
-              <option>{% t services.tab.title.6 %}</option>
-            </select>
+            <label for="select-service" class='service'>
+              <select name="service" id="select-service" class="service">
+                <option>{% t services.tab.title.1 %}</option>
+                <option>{% t services.tab.title.2 %}</option>
+                <option>{% t services.tab.title.3 %}</option>
+                <option>{% t services.tab.title.4 %}</option>
+                <option>{% t services.tab.title.5 %}</option>
+                <option>{% t services.tab.title.6 %}</option>
+              </select>
+            </label>
           </td>
         </tr>
         <tr>
