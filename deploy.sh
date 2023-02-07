@@ -1,8 +1,6 @@
 cd _site/
 
 touch .nojekyll
-touch CNAME
-echo -n "clean.guru" >> CNAME
 
 git status
 git add -A .
